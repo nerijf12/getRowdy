@@ -1,0 +1,71 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.background{
+	-fx-background-image: url("../images/connect.png");
+    -fx-background-repeat: repeat;
+    -fx-background-position: center center;	
+}
+
+#postHolder{
+	-fx-background-color:#ffffff;
+	-fx-border-color:#f2f2f2;
+	-fx-border-width: 2;
+}
+
+#postSectionPane {
+    -fx-fit-to-height: true;
+    -fx-fit-to-width: true;
+}
+
+.anchorPane {
+	-fx-background-color:white;
+}
+
+.pane {
+	-fx-background-color: #0c2340;
+}
+
+.postGridPane, .postPane{
+	/*-fx-background-color: #FFE1D5;*/
+}
+
+.nameText{
+	-fx-fill:white;
+}
+
+.dashboardTxtFields{
+	-fx-border-radius: 15;
+  	-fx-background-radius: 15;
+}
+
+.loginTxtFields{
+	-fx-border-radius: 15;
+  	-fx-background-radius: 15;
+}
+
+.navButton{
+	-fx-background-color: #f15a22;
+	-fx-text-fill:white;
+	-fx-background-radius: 8,7,6;
+	-fx-border-radius: 20;
+  	-fx-background-radius: 20;
+}
+
+.navButton:hover{
+	-fx-background-color:#d6450f;
+	-fx-border-radius: 20;
+  	-fx-background-radius: 20;
+}
+
+.publishButton,  .postCommentBtn{
+	-fx-background-color: #0c2340;
+	-fx-text-fill:white;
+	-fx-background-radius: 8,7,6;
+	-fx-border-radius: 20;
+  	-fx-background-radius: 20;
+}
+
+.publishButton:hover, .postCommentBtn:hover{
+	-fx-background-color:#f15a22;
+	-fx-border-radius: 20;
+  	-fx-background-radius: 20;
+}
