@@ -2,13 +2,13 @@ package model;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
 public class PostData {
 	private static Post post;
-	private static List<Post> postsList = new ArrayList<Post>();
+	private static List<Post> postsList = new LinkedList<Post>();
 	
 	public PostData() {}
 	
@@ -24,11 +24,11 @@ public class PostData {
 	 * returns the festival array list
 	 * @return
 	 */
-	public List<Post> getPostArrayList() {
+	public List<Post> getPostLinkedList() {
 		return postsList;
 	}
-	public int getPostArrayListSize() {
-		return getPostArrayList().size();
+	public int getPostLinkedListSize() {
+		return getPostLinkedList().size();
 	}
 	/**
 	 * adds the festival objects into the festival array list

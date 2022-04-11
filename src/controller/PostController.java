@@ -40,14 +40,14 @@ public class PostController implements Initializable{
     	Image image;
     	String userFileSrc = "", userTitle = "", userBody = "";
     	for(int i=0; i<userData.getUserArray().size();i++) {
-    		for(int j=0; j<postData.getPostArrayList().size();j++) {
+    		for(int j=0; j<postData.getPostLinkedList().size();j++) {
 	    		if(userName.equals(
-	    				postData.getPostArrayList().get(j).getPostUser())) {
+	    				postData.getPostLinkedList().get(j).getPostUser())) {
 	    			if(userName.equals(userData.getUserArray().get(i).getUserName())) {
 	    				userFileSrc = userData.getUserArray().get(i).getProfilePicSrc();
 	    			}
-					userTitle = postData.getPostArrayList().get(j).getPostTitle();
-	    			userBody = postData.getPostArrayList().get(j).getPostDescription();
+					userTitle = postData.getPostLinkedList().get(j).getPostTitle();
+	    			userBody = postData.getPostLinkedList().get(j).getPostDescription();
 			    	image = new Image(DashBoardViewAndRoots.getAssetsImagesRoot() + userFileSrc);
 			    	userImages.setImage(image);
 			    	headerText.setText(userTitle);

@@ -103,13 +103,13 @@ public class DashBoardController implements Initializable{
     }
     
     private void loadListData() throws IOException{
-		for(int i=0;i<postData.getPostArrayListSize();i++) {
+		for(int i=0;i<postData.getPostLinkedListSize();i++) {
 	    	postControllers = new PostController();
 	    	FXMLLoader postLoader = new FXMLLoader(getClass().getResource(DashBoardViewAndRoots.getViewRoot() + "posts.fxml"));
 	    	postLoader.setController(postControllers);
 	    	Pane newLoadedPane = (Pane) postLoader.load();
 	    	postControllers.setRootPane(newLoadedPane);
-	    	postControllers.loadProfile(postData.getPostArrayList().get(i).getPostUser());    	
+	    	postControllers.loadProfile(postData.getPostLinkedList().get(i).getPostUser());    	
 	    	postPane.getChildren().add(newLoadedPane);
 		}
 		publishPostData();

@@ -1,12 +1,12 @@
 package model;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class AllPosts {
-	private ArrayList<Post> allPostAList;
+	private LinkedList<Post> allPostAList;
 
 	public AllPosts(){
-		 allPostAList = new ArrayList<Post>();
+		 allPostAList = new LinkedList<Post>();
 	 }
 	 public void addPost(Post post) {
 			allPostAList.add(post);
@@ -14,10 +14,10 @@ public class AllPosts {
 	 public void removePost(Post post) {
 			allPostAList.remove(post);
 	}
-	public ArrayList<Post> getAllPostAList() {
+	public LinkedList<Post> getAllPostAList() {
 		return allPostAList;
 	}
-	public void setAllPostAList(ArrayList<Post> allPostAList) {
+	public void setAllPostAList(LinkedList<Post> allPostAList) {
 		this.allPostAList = allPostAList;
 	}
 

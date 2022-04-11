@@ -180,13 +180,13 @@ public class MainController implements Initializable{
 				profile.setOneHobby(profileData.getProfileArray().get(i).getOneHobby());
 			}
     	}
-    	for(int i=0; i<postData.getPostArrayListSize();i++) {
-    		if(userName.equals(postData.getPostArrayList().get(i).getPostUser())) {
+    	for(int i=0; i<postData.getPostLinkedListSize();i++) {
+    		if(userName.equals(postData.getPostLinkedList().get(i).getPostUser())) {
 				post = new Post();
-				post.setPostDate(postData.getPostArrayList().get(i).getPostDate());
-				post.setPostDescription(postData.getPostArrayList().get(i).getPostDescription());
-				post.setPostTitle(postData.getPostArrayList().get(i).getPostTitle());
-				post.setPostUser(postData.getPostArrayList().get(i).getPostUser());
+				post.setPostDate(postData.getPostLinkedList().get(i).getPostDate());
+				post.setPostDescription(postData.getPostLinkedList().get(i).getPostDescription());
+				post.setPostTitle(postData.getPostLinkedList().get(i).getPostTitle());
+				post.setPostUser(postData.getPostLinkedList().get(i).getPostUser());
     		}
     	}
     }

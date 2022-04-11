@@ -2,13 +2,13 @@ package model;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
 public class ProfileData {
 	private static Profile profile;
-	private static List<Profile> profileList = new ArrayList<Profile>();
+	private static List<Profile> profileList = new LinkedList<Profile>();
 
 	public List<Profile> getProfileArray() {
 		return profileList;
