@@ -55,11 +55,12 @@ public class Post {
 //-------------------------------------------- loadPosts method -----------------------------------------------
 	public static void loadPosts() throws IOException{
 			Scanner scan;
-			Post tempPost = new Post();
+			Post tempPost;
 			Comment tempComment = new Comment();
 
 			try {
 				System.out.println("loading posts");
+				tempPost = new Post();
 				File file = new File( "posts.csv" );
 				scan = new Scanner( file );
 				while ( scan.hasNextLine() ) // while there is more to read
