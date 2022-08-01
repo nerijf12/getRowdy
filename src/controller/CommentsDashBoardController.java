@@ -66,13 +66,13 @@ public class CommentsDashBoardController implements Initializable{
 				for (Post post : Post.everyPost.getAllPostAList()) {
 					fr.append(post.getPostDate()+","+post.getPostUser()+","
 							+post.getPostTitle()+","+post.getPostDescription()+"\n");
-					for (Comment comment : post.getComments()) {
-						fr.append("comment,"+comment.getTime()+","+comment.getName()+","+comment.getText());
-					}
-					if (Post.getCurrentPost().equals(post)) {
-						fr.append(date+","+
-						User.getCurrentUser().getUserName()+","+body+"\n");
-					}
+//					for (Comment comment : post.getComments()) {
+//						fr.append("comment,"+comment.getTime()+","+comment.getName()+","+comment.getText());
+//					}
+//					if (Post.getCurrentPost().equals(post)) {
+//						fr.append(date+","+
+//						User.getCurrentUser().getUserName()+","+body+"\n");
+//					}
 				}
 				
 				fr.close();
