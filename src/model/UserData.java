@@ -45,6 +45,8 @@ public class UserData {
 	public void resetUserData() {
 		usersList.clear();
 	}
+
+	public static AllPosts everyPost = new AllPosts();
 	
 	/**
 	 * Factory method implementation that searches through a csv file for the stage data

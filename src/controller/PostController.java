@@ -40,21 +40,21 @@ public class PostController implements Initializable{
     	Image image;
     	String userFileSrc = "", userTitle = "", userBody = "";
     	for(int i=0; i<userData.getUserArray().size();i++) {
-    		for(int j=0; j<postData.getPostLinkedList().size();j++) {
-	    		if(userName.equals(
-	    				postData.getPostLinkedList().get(j).getPostUser())) {
-	    			if(userName.equals(userData.getUserArray().get(i).getUserName())) {
-	    				userFileSrc = userData.getUserArray().get(i).getProfilePicSrc();
-	    			}
-					userTitle = postData.getPostLinkedList().get(j).getPostTitle();
-	    			userBody = postData.getPostLinkedList().get(j).getPostDescription();
-			    	image = new Image(DashBoardViewAndRoots.getAssetsImagesRoot() + userFileSrc);
-			    	userImages.setImage(image);
-			    	headerText.setText(userTitle);
-	    	    	bodyText.setText(userBody);
-	    		}
-    		}
-    	}
+			if (userName.equals(userData.getUserArray().get(i).getUserName())) {
+				userFileSrc = userData.getUserArray().get(i).getProfilePicSrc();
+			}
+		}
+		for(int i=0; i<postData.getPostLinkedList().size();i++) {
+			if(userName.equals(
+					postData.getPostLinkedList().get(i).getPostUser())) {
+				userTitle = postData.getPostLinkedList().get(i).getPostTitle();
+				userBody = postData.getPostLinkedList().get(i).getPostDescription();
+				image = new Image(DashBoardViewAndRoots.getAssetsImagesRoot() + userFileSrc);
+				userImages.setImage(image);
+				headerText.setText(userTitle);
+				bodyText.setText(userBody);
+			}
+		}
     }
     
     private void setImage() {
